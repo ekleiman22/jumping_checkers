@@ -1,0 +1,15 @@
+﻿.canvas1 {
+    margin-left: 0px;
+    margin-top: 0px;
+   
+}
+.div1 {
+    float: left;
+    width: 50%;
+    /*border: 1px solid blue;*/
+}
+#divButtons {
+    float: left;
+    width: 40%;
+    border: 0px solid red;
+}

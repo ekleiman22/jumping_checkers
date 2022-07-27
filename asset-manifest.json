@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/jumping_checkers/static/css/main.482168ec.css",
-    "main.js": "/jumping_checkers/static/js/main.6dd38def.js",
+    "main.js": "/jumping_checkers/static/js/main.81120b19.js",
     "index.html": "/jumping_checkers/index.html",
     "main.482168ec.css.map": "/jumping_checkers/static/css/main.482168ec.css.map",
-    "main.6dd38def.js.map": "/jumping_checkers/static/js/main.6dd38def.js.map"
+    "main.81120b19.js.map": "/jumping_checkers/static/js/main.81120b19.js.map"
   },
   "entrypoints": [
     "static/css/main.482168ec.css",
-    "static/js/main.6dd38def.js"
+    "static/js/main.81120b19.js"
   ]
 }

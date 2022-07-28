@@ -1,4 +1,7 @@
 ﻿import { glob } from './Global'
+import Checker from './checker'
+
+
 export default class DrawManager
 {
     drawGameField() {
@@ -47,38 +50,41 @@ export default class DrawManager
 
     }
 
-    createCheckers = () => {
-        let result = [];
+     createCheckers = () => {
+         let result = [];
         let g = glob();
         let cellsCount = Number(g.cellsCount);
-        let emptyCellIndex = Math.floor(cellsCount / 2);
-        //get game field location and dumensions to define place of current checker
-        let leftFieldgamePos = Number(g.leftFieldgamePos);
-        let topFieldgamePos = Number(g.topFieldgamePos);
-        let widthFieldgame = Number(g.widthFieldgame);
-        let heightFieldgame = Number(g.heightFieldgame);
-
-        let cellWidth = Number(widthFieldgame) / cellsCount;
+         let emptyCellIndex = Math.floor(cellsCount / 2);
+         //get game field location and dumensions to define place of current checker
+         let leftFieldgamePos = Number(g.leftFieldgamePos);
+         let topFieldgamePos = Number(g.topFieldgamePos);
+         let widthFieldgame = Number(g.widthFieldgame);
+         let heightFieldgame = Number(g.heightFieldgame);
+         
+         let cellWidth = Number(widthFieldgame) / cellsCount;
         for (var i = 0; i < cellsCount; i++) {
-            let checker = {};
-            checker.cellId = i + 1;
-            checker.color = g.emptyCheckerColor;
+            var props = {};
+            props.cellId = i + 1;
+            props.color = g.emptyCheckerColor;
             if (i < emptyCellIndex)
-                checker.color = g.leftCheckerColor;
+                props.color = g.leftCheckerColor;
             if (i > emptyCellIndex)
-                checker.color = g.rightCheckerColor;
-            checker.centerX = leftFieldgamePos + (checker.cellId - 1) * cellWidth + cellWidth / 2;
-            checker.centerY = topFieldgamePos + heightFieldgame / 2;
-            checker.checkerRadius = Number(g.checkerRadius);
+                props.color = g.rightCheckerColor;
 
-            //let checker = new Checker(props);
-            //let checker = props;
+            
 
+            props.centerX = leftFieldgamePos + (props.cellId - 1) * cellWidth + cellWidth / 2;
+            props.centerY = topFieldgamePos + heightFieldgame / 2;
+            props.checkerRadius = Number(g.checkerRadius);
 
+            let checker = new Checker(props);
+            
+            //if (checker.color != "empty")
+                
             result.push(checker);
         }
 
-        return result;
+         return result;
     }
     redrawCheckers = (checkers) => {
 

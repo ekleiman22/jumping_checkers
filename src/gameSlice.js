@@ -20,6 +20,8 @@ const checkGameEnd = (cellColors)=>
         }
 
     }
+    if (result)
+        setTimeout(alert("You win!"), 1000);
     return result;
 }
 const setcellColors = () => {
@@ -138,9 +140,10 @@ export const gameSlice = createSlice({
                     redrawCheckers(checkers);
                     addMoveToProtocol(newmove);
                 }                
-                 state.moveBegin = false;
-                if (checkGameEnd(state.cellColors))
-                    alert("You win!")
+                state.moveBegin = false;
+                checkGameEnd(state.cellColors);
+                //if (checkGameEnd(state.cellColors))
+                //    alert("You win!")
             }
         },
         undo: (state, action) => {

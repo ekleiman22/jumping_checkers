@@ -10,7 +10,7 @@
     <!--<link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />-->
 
 
-    <!--<link href="../src/stylesheets/mycss.css" rel="stylesheet" />-->
+    <link href="../src/stylesheets/mycss.css" rel="stylesheet" />
     <title>Jumping checkers</title>
 </head>
 <body>
@@ -24,22 +24,19 @@
         3.The game goal is to change the black checkers by green one and vice versa.
     </div>
     <table border="0" class="table1" id="tbl1">
-        <tr style="height:100px">
-            <td width="50%" >                
-                    <canvas id="canvas1" width="800" height="100"></canvas>                
-            </td>
-        </tr>
         <tr>
+            <td width="50%">
+                
+                    <canvas id="canvas1" width="800" height="200"></canvas>
+
+                
+            </td>
             <td>
                 
                     <input id="btnUndo" type="button" value="Undo Last Move" />
                     <input id="btnShowSolution" type="button" value="Show Solution" />
-           </td>
-           </tr>
-        <tr>
-            <td>
                     <div id="divProtocol">
-                        <textarea id="txtProtocol" rows="4" cols="100">               
+                        <textarea id="txtProtocol" rows="18" cols="20">               
                          </textarea>
                     </div>
                 

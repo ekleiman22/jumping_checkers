@@ -17,7 +17,7 @@ export default class Checker
     
          
       
-    render() {
-        return
-    }
+    //render() {
+    //    return
+    //}
 }
